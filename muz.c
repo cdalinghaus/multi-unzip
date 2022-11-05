@@ -42,4 +42,13 @@ int main(int argc, char *argv[]) {
         return 0;
     }
 
+    // .gz
+    if(endsWith(argv[1], "gz")) {
+        strcat(cmd, "gzip -d ");
+        strcat(cmd, argv[1]);
+
+        system(cmd);
+        return 0;
+    }
+
 }
